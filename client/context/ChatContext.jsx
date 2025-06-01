@@ -72,7 +72,7 @@ export const ChatProvider = ({ children }) => {
   }
 
   const unsubscribeFromMessages = () => {
-    if(!socket) socket.off("newMessage");
+    if(socket) socket.off("newMessage");
   
   }
 
@@ -86,7 +86,7 @@ export const ChatProvider = ({ children }) => {
         users,
         selectedUser,
         getUsers,
-        setMessages,
+        getMessages,
         sendMessage,
         setSelectedUser,
         unseenMessages,
